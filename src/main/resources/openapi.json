@@ -1,0 +1,357 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Connections API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/connections": {
+      "get": {
+        "operationId": "getConnectionsList",
+        "x-vertx-event-bus": "connections_manager.myapp",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Connection"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      },
+      "post": {
+        "operationId": "createConnection",
+        "x-vertx-event-bus": "connections_manager.myapp",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Connection"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      }
+    },
+    "/api/connections/{connectionId}": {
+      "parameters": [
+        {
+          "name": "connectionId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "operationId": "getConnection",
+        "x-vertx-event-bus": "connections_manager.myapp",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Connection"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      },
+      "put": {
+        "operationId": "updateConnection",
+        "x-vertx-event-bus": "connections_manager.myapp",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Connection"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Connection"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteConnection",
+        "x-vertx-event-bus": "connections_manager.myapp",
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      }
+    },
+    "/api/connections/{connectionId}/_enable": {
+      "parameters": [
+        {
+          "name": "connectionId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "put": {
+        "operationId": "enableConnection",
+        "x-vertx-event-bus": "connections_manager.myapp",
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "404": {
+            "description": "Nof found"
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      }
+    },
+    "/api/providers": {
+      "get": {
+        "operationId": "getProvidersList",
+        "x-vertx-event-bus": "providers_manager.myapp",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Provider"
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      },
+      "post": {
+        "operationId": "createProvider",
+        "x-vertx-event-bus": "providers_manager.myapp",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Provider"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      }
+    },
+    "/api/providers/{providerId}": {
+      "parameters": [
+        {
+          "name": "providerId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "get": {
+        "operationId": "getProvider",
+        "x-vertx-event-bus": "providers_manager.myapp",
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Provider"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      },
+      "put": {
+        "operationId": "updateProvider",
+        "x-vertx-event-bus": "providers_manager.myapp",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Provider"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Ok",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Provider"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      },
+      "delete": {
+        "operationId": "deleteProvider",
+        "x-vertx-event-bus": "providers_manager.myapp",
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      }
+    },
+    "/api/providers/{providerId}/_enable": {
+      "parameters": [
+        {
+          "name": "providerId",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "put": {
+        "operationId": "enableProvider",
+        "x-vertx-event-bus": "providers_manager.myapp",
+        "responses": {
+          "200": {
+            "description": "Ok"
+          },
+          "404": {
+            "description": "Nof found"
+          },
+          "500": {
+            "description": "Something wrong happened"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Connection": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "host": {
+            "type": "string"
+          },
+          "port": {
+            "type": "number"
+          },
+          "enabled": {
+            "type": "boolean",
+            "default": false
+          },
+          "providerAddress": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "host",
+          "port",
+          "providerAddress"
+        ]
+      },
+      "Provider": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "host": {
+            "type": "string"
+          },
+          "port": {
+            "type": "number"
+          },
+          "enabled": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "host",
+          "port"
+        ]
+      }
+    }
+  }
+}
