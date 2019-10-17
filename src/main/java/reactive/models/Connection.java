@@ -1,8 +1,8 @@
-package models;
+package reactive.models;
 
 import lombok.Builder;
 import lombok.Data;
-import services.ProviderService;
+import reactive.services.ProviderService;
 
 @Data
 @Builder

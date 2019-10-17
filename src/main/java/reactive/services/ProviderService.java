@@ -1,7 +1,7 @@
-package services;
+package reactive.services;
 
 import io.vertx.core.Future;
-import models.Provider;
+import reactive.models.Provider;
 
 public interface ProviderService {
     boolean enable(Provider configuration);

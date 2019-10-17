@@ -1,14 +1,14 @@
-package services.impl;
+package reactive.services.impl;
 
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;
 import io.vertx.core.net.NetClient;
 import io.vertx.core.net.NetClientOptions;
 import io.vertx.core.net.NetSocket;
-import models.Provider;
+import reactive.models.Provider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import services.ProviderService;
+import reactive.services.ProviderService;
 
 public class IpProvider implements ProviderService {
     private static final Logger logger = LoggerFactory.getLogger(IpProvider.class);

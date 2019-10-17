@@ -1,4 +1,4 @@
-package models;
+package reactive.models;
 
 import lombok.Builder;
 import lombok.Data;

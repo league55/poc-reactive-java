@@ -1,12 +1,12 @@
-package services.impl;
+package reactive.services.impl;
 
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;
 import io.vertx.core.net.NetServerOptions;
-import models.Connection;
+import reactive.models.Connection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import services.ConnectionService;
+import reactive.services.ConnectionService;
 
 public class ServerConnection implements ConnectionService {
     private static final Logger logger = LoggerFactory.getLogger(ServerConnection.class);
