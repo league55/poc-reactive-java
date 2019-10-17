@@ -1,7 +1,7 @@
-package persistance.impl;
+package reactive.persistance.impl;
 
-import models.Connection;
-import persistance.ConnectionPersistence;
+import reactive.models.Connection;
+import reactive.persistance.ConnectionPersistence;
 
 import java.util.ArrayList;
 import java.util.HashMap;

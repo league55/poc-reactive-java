@@ -1,7 +1,7 @@
-package persistance.impl;
+package reactive.persistance.impl;
 
-import models.Provider;
-import persistance.ProviderPersistence;
+import reactive.models.Provider;
+import reactive.persistance.ProviderPersistence;
 
 import java.util.ArrayList;
 import java.util.HashMap;

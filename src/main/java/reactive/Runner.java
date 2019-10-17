@@ -1,4 +1,6 @@
-import api.WebApiService;
+package reactive;
+
+import reactive.api.WebApiService;
 import io.netty.util.internal.logging.InternalLoggerFactory;
 import io.netty.util.internal.logging.Log4JLoggerFactory;
 import io.vertx.core.Vertx;

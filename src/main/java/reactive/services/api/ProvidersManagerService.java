@@ -1,4 +1,4 @@
-package services;
+package reactive.services.api;
 
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
@@ -6,9 +6,9 @@ import io.vertx.core.Vertx;
 import io.vertx.ext.web.api.OperationRequest;
 import io.vertx.ext.web.api.OperationResponse;
 import io.vertx.ext.web.api.generator.WebApiServiceGen;
-import models.Provider;
-import persistance.ProviderPersistence;
-import services.impl.ProvidersManagerServiceImpl;
+import reactive.models.Provider;
+import reactive.persistance.ProviderPersistence;
+import reactive.services.api.impl.ProvidersManagerServiceImpl;
 
 @WebApiServiceGen
 public interface ProvidersManagerService {

@@ -1,4 +1,4 @@
-package services.impl;
+package reactive.services.broker.impl;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.AsyncResult;
@@ -8,10 +8,10 @@ import io.vertx.core.eventbus.EventBus;
 import io.vertx.core.net.NetServer;
 import io.vertx.core.net.NetServerOptions;
 import io.vertx.core.net.NetSocket;
-import models.Connection;
+import reactive.models.Connection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import services.ConnectionService;
+import reactive.services.broker.ConnectionService;
 
 public class ServerConnection extends AbstractVerticle implements ConnectionService {
     private static final Logger logger = LoggerFactory.getLogger(ServerConnection.class);

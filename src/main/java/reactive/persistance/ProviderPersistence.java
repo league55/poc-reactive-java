@@ -1,7 +1,7 @@
-package persistance;
+package reactive.persistance;
 
-import models.Provider;
-import persistance.impl.ProviderPersistenceImpl;
+import reactive.models.Provider;
+import reactive.persistance.impl.ProviderPersistenceImpl;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package models;
+package reactive.models;
 
 import io.vertx.codegen.annotations.DataObject;
 import io.vertx.codegen.annotations.Fluent;

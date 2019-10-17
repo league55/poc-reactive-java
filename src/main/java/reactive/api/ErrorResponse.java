@@ -1,4 +1,4 @@
-package api;
+package reactive.api;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

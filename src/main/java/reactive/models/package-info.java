@@ -1,4 +1,4 @@
 @ModuleGen(name = "reactive", groupPackage = "")
-package services;
+package reactive.models;
 
 import io.vertx.codegen.annotations.ModuleGen;

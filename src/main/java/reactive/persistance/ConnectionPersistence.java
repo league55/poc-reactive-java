@@ -1,7 +1,7 @@
-package persistance;
+package reactive.persistance;
 
-import models.Connection;
-import persistance.impl.ConnectionPersistenceImpl;
+import reactive.models.Connection;
+import reactive.persistance.impl.ConnectionPersistenceImpl;
 
 import java.util.List;
 import java.util.Optional;

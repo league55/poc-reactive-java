@@ -1,4 +1,4 @@
-package services.impl;
+package reactive.services.api.impl;
 
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Future;
@@ -7,9 +7,10 @@ import io.vertx.core.Vertx;
 import io.vertx.core.json.JsonArray;
 import io.vertx.ext.web.api.OperationRequest;
 import io.vertx.ext.web.api.OperationResponse;
-import models.Provider;
-import persistance.ProviderPersistence;
-import services.ProvidersManagerService;
+import reactive.models.Provider;
+import reactive.persistance.ProviderPersistence;
+import reactive.services.api.ProvidersManagerService;
+import reactive.services.broker.impl.IpProvider;
 
 import java.util.List;
 import java.util.Optional;

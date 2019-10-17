@@ -1,4 +1,4 @@
-package services;
+package reactive.services.api;
 
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Handler;
@@ -6,9 +6,9 @@ import io.vertx.core.Vertx;
 import io.vertx.ext.web.api.OperationRequest;
 import io.vertx.ext.web.api.OperationResponse;
 import io.vertx.ext.web.api.generator.WebApiServiceGen;
-import models.Connection;
-import persistance.ConnectionPersistence;
-import services.impl.ConnectionsManagerServiceImpl;
+import reactive.models.Connection;
+import reactive.persistance.ConnectionPersistence;
+import reactive.services.api.impl.ConnectionsManagerServiceImpl;
 
 @WebApiServiceGen
 public interface ConnectionsManagerService {

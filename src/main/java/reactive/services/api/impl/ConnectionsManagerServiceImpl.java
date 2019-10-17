@@ -1,7 +1,7 @@
-package services.impl;
+package reactive.services.api.impl;
 
-import api.ErrorResponse;
-import static api.SuccessResponse.SUCCESS;
+import reactive.api.ErrorResponse;
+import static reactive.api.SuccessResponse.SUCCESS;
 import io.vertx.core.AsyncResult;
 import io.vertx.core.Future;
 import io.vertx.core.Handler;
@@ -10,9 +10,10 @@ import io.vertx.core.json.JsonArray;
 import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.api.OperationRequest;
 import io.vertx.ext.web.api.OperationResponse;
-import models.Connection;
-import persistance.ConnectionPersistence;
-import services.ConnectionsManagerService;
+import reactive.models.Connection;
+import reactive.persistance.ConnectionPersistence;
+import reactive.services.api.ConnectionsManagerService;
+import reactive.services.broker.impl.ServerConnection;
 
 import java.util.List;
 import java.util.Optional;

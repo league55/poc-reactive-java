@@ -1,4 +1,4 @@
-package api;
+package reactive.api;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
@@ -9,10 +9,10 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.Router;
 import io.vertx.ext.web.api.contract.openapi3.OpenAPI3RouterFactory;
 import io.vertx.serviceproxy.ServiceBinder;
-import persistance.ConnectionPersistence;
-import persistance.ProviderPersistence;
-import services.ConnectionsManagerService;
-import services.ProvidersManagerService;
+import reactive.persistance.ConnectionPersistence;
+import reactive.persistance.ProviderPersistence;
+import reactive.services.api.ConnectionsManagerService;
+import reactive.services.api.ProvidersManagerService;
 
 public class WebApiService extends AbstractVerticle {
 
@@ -45,7 +45,7 @@ public class WebApiService extends AbstractVerticle {
     }
 
     /**
-     * This method constructs the router factory, mounts services and handlers and starts the http server with built router
+     * This method constructs the router factory, mounts reactive.services and handlers and starts the http server with built router
      * @return
      */
     private Future<Void> startHttpServer() {
@@ -54,7 +54,7 @@ public class WebApiService extends AbstractVerticle {
             if (openAPI3RouterFactoryAsyncResult.succeeded()) {
                 OpenAPI3RouterFactory routerFactory = openAPI3RouterFactoryAsyncResult.result();
 
-                // Mount services on event bus based on extensions
+                // Mount reactive.services on event bus based on extensions
                 routerFactory.mountServicesFromExtensions();
 
                 // Generate the router
@@ -80,7 +80,7 @@ public class WebApiService extends AbstractVerticle {
     }
 
     /**
-     * This method closes the http server and unregister all services loaded to Event Bus
+     * This method closes the http server and unregister all reactive.services loaded to Event Bus
      */
     @Override
     public void stop(){
