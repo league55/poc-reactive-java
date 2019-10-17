@@ -1,16 +1,15 @@
-package services.impl;
+package reactive.services.impl;
 
 import io.vertx.core.AbstractVerticle;
 import io.vertx.core.Future;
 import io.vertx.core.eventbus.EventBus;
-import io.vertx.core.json.JsonObject;
 import io.vertx.core.net.NetClient;
 import io.vertx.core.net.NetClientOptions;
 import io.vertx.core.net.NetSocket;
-import models.Provider;
+import reactive.models.Provider;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import services.ProviderService;
+import reactive.services.ProviderService;
 
 public class IpProvider extends AbstractVerticle implements ProviderService {
     private static final Logger logger = LoggerFactory.getLogger(IpProvider.class);

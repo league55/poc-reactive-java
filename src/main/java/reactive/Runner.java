@@ -1,14 +1,14 @@
+package reactive;
+
 import io.netty.util.internal.logging.InternalLoggerFactory;
 import io.netty.util.internal.logging.Log4JLoggerFactory;
-import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Vertx;
 import io.vertx.core.VertxOptions;
-import io.vertx.core.json.JsonObject;
-import models.Connection;
-import models.Provider;
+import reactive.models.Connection;
+import reactive.models.Provider;
 import org.apache.log4j.BasicConfigurator;
-import services.impl.IpProvider;
-import services.impl.ServerConnection;
+import reactive.services.impl.IpProvider;
+import reactive.services.impl.ServerConnection;
 
 public class Runner {
     public static void main(String[] args) {

@@ -25,7 +25,7 @@ list:
 	@$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$' | xargs
 
 run:
-	$(MVN) exec:java -Dexec.mainClass=Runner
+	$(MVN) exec:java -Dexec.mainClass=reactive.Runner
 
 debug:
-	mvnDebug exec:java -Dexec.mainClass=Runner
+	mvnDebug exec:java -Dexec.mainClass=reactive.Runner

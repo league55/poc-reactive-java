@@ -92,7 +92,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Runner</mainClass>
+                            <mainClass>reactive.Runner</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
